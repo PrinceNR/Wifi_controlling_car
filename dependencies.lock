@@ -1,0 +1,51 @@
+dependencies:
+  chill-sam/ssd1306:
+    component_hash: 6be33faa92d913d198ef61f70d58708c4cebd5c93e74cf3e2a43446877cf04f6
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.3'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32
+    - esp32s2
+    - esp32s3
+    - esp32c3
+    version: 1.1.2
+  idf:
+    source:
+      type: idf
+    version: 6.1.0
+  k0i05/esp_bmp280:
+    component_hash: 8dd4be3510d908209f42498683c3ba6719e25ffeebdd4710b33ad94055e63a0a
+    dependencies:
+    - name: idf
+      require: private
+      version: '>5.3.0'
+    - name: k0i05/esp_type_utils
+      registry_url: https://components.espressif.com
+      require: private
+      version: '>=1.0.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.2.7
+  k0i05/esp_type_utils:
+    component_hash: 95d8ec40268e045f7e264d8035f451e53844b4a2f6d5f112ece6645c5effd639
+    dependencies:
+    - name: idf
+      require: private
+      version: '>5.3.0'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.2.7
+direct_dependencies:
+- chill-sam/ssd1306
+- idf
+- k0i05/esp_bmp280
+manifest_hash: 6ede69e3db6e7c4de32fa09fef161aaa5b01bc7cbd2e958911f3cd2fa75ab906
+target: esp32
+version: 3.0.0
